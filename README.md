@@ -1,6 +1,6 @@
 **Readme.txt File Template:**
 
----
+hosting link:- https://employeemanagements-production.up.railway.app/Employee/all
 
 ### Project Overview:
 
@@ -32,14 +32,16 @@ The application will start on `http://localhost:8080`.
 
 #### 2. Database Setup:
 
-- Ensure CouchDB is installed and running.
+- Ensure MongoDB is installed and running.
 
 - Configure the database connection in `application.properties`:
 
 ```properties
-spring.data.couchbase.connection-string=<CouchDB_Connection_String>
-spring.data.couchbase.username=<CouchDB_Username>
-spring.data.couchbase.password=<CouchDB_Password>
+spring.data.mongodb.host=<MongoDB_host_String>
+spring.data.mongodb.port=<MogoDB_port_integer>
+spring.data.mongodb.database=<MongoDB_database_String>
+spring.data.mongodb.username=<MongoDB_Username>
+spring.data.couchbase.password=<MongoDB_Password>
 ```
 
 #### 3. API Documentation:
@@ -47,7 +49,7 @@ spring.data.couchbase.password=<CouchDB_Password>
 ##### Entry Level:
 
 a. **Add Employee:**
-- **Endpoint:** POST `/api/employees`
+- **Endpoint:** POST `/Employee/`
 - **Input JSON Structure:**
   ```json
   {
@@ -66,7 +68,7 @@ a. **Add Employee:**
   ```
 
 b. **Get All Employees:**
-- **Endpoint:** GET `/api/employees`
+- **Endpoint:** GET `/Employee/all`
 - **Input:** None
 - **Output JSON Structure:**
   ```json
@@ -84,7 +86,7 @@ b. **Get All Employees:**
   ```
 
 c. **Delete Employee by ID:**
-- **Endpoint:** DELETE `/api/employees/{employeeId}`
+- **Endpoint:** DELETE `/Employee/{employeeId}`
 - **Input:** None
 - **Output JSON Structure:**
   ```json
@@ -94,7 +96,7 @@ c. **Delete Employee by ID:**
   ```
 
 d. **Update Employee by ID:**
-- **Endpoint:** PUT `/api/employees/{employeeId}`
+- **Endpoint:** PUT `/Employee/{employeeId}`
 - **Input JSON Structure:**
   ```json
   {
@@ -115,7 +117,7 @@ d. **Update Employee by ID:**
 ##### Intermediate Level:
 
 a. **Get nth Level Manager:**
-- **Endpoint:** GET `/api/employees/{employeeId}/managers/{level}`
+- **Endpoint:** GET `/Employee/{employeeId}/managers/{level}`
 - **Input:** None
 - **Output JSON Structure:**
   ```json
@@ -128,7 +130,7 @@ a. **Get nth Level Manager:**
   ```
 
 b. **Get Employees with Pagination and Sorting:**
-- **Endpoint:** GET `/api/employees?page={pageNumber}&size={pageSize}&sort={sortField}`
+- **Endpoint:** GET `/Employee?page={pageNumber}&size={pageSize}&sort={sortField}`
 - **Input:** None
 - **Output JSON Structure:**
   ```json
@@ -171,4 +173,4 @@ b. **Host the Application:**
 
 
 
-hosting link:- https://employeemanagements-production.up.railway.app/Employee/all
+
