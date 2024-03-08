@@ -6,13 +6,9 @@ This project implements an Employee Management API using Spring Boot. It provide
 Technologies Used
 
 Spring Boot 3.2.1
-
 Mongodb 7
-
 JavaMail API
-
 AWS (for hosting)
-
 
 API Endpoints
 
