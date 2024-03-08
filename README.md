@@ -47,7 +47,8 @@ Input validation is implemented for all API endpoints.
 Error handling mechanisms are in place to handle exceptions gracefully and provide meaningful error messages to clients.
 
 Deployment
-The application is hosted on aws and accessible at http://51.20.42.176:8080/Employee/
+The application is hosted on aws and accessible at http://51.20.42.176:8080/Employee/all or http://51.20.42.176:8080/Employee/all?pageNumber=1&pageSize=2&sortBy=employeeName
+
 
 Running Locally
 To run the application locally:
